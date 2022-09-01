@@ -61,7 +61,7 @@
             $n = 1;
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
-                    echo '<option value=$n>'.$row["Nazwa"].'</option>';
+                    echo '<option value='.$n.'>'.$row["Nazwa"].'</option>';
                     $n += 1;
                 }
             }
@@ -73,7 +73,7 @@
             $n = 1;
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
-                    echo '<option value=$n>'.$row["Nazwa"].'</option>';
+                    echo '<option value='.$n.'>'.$row["Nazwa"].'</option>';
                     $n += 1;
                 }
             }
@@ -90,11 +90,22 @@
                 }
             }
             echo '<br><br><hr>';
-
         ?>
         <label for="sks">Skill Specjalny: </label><textarea id="sks" name="sks" rows="1" cols="150"></textarea><br><br><hr>
         <label for="opis">Opis: </label><textarea id="opis" name="opis" rows="1" cols="150"></textarea><br><br><hr>
-        <label for="wystepowanie">Występowanie: </label><input type="text" id="wystepowanie" name="wystepowanie"><br><br><hr>
+        <?php
+            echo '<label for="wystepowanie">Występowanie: </label><select id="wystepowanie" name="wystepowanie">';
+                $sql = "SELECT Nazwa FROM wystepowanie";
+                $result = $baza->query($sql);
+                $n = 1;
+                if ($result->num_rows > 0) {
+                    while ($row = $result->fetch_assoc()) {
+                        echo '<option value='.$n.'>'.$row["Nazwa"].'</option>';
+                        $n += 1;
+                    }
+                }
+                echo '</select><br><br><hr>';
+        ?>
         <button>Utwórz kartę</button><br><br>
     </form>
 
