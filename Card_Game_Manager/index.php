@@ -79,19 +79,8 @@
             }
             echo '</select><br><br><hr>';
 
-            echo '<a>Skill Podstawowy: </a>';
-            $sql = "SELECT Nazwa FROM skill_pods";
-            $result = $baza->query($sql);
-            $n = 1;
-            if ($result->num_rows > 0) {
-                while ($row = $result->fetch_assoc()) {
-                    echo '<input type="checkbox" name="sp[]" value="'.$n.'"> '.$row["Nazwa"].' |';
-                    $n += 1;
-                }
-            }
-            echo '<br><br><hr>';
         ?>
-        <label for="sks">Skill Specjalny: </label><textarea id="sks" name="sks" rows="1" cols="150"></textarea><br><br><hr>
+        <label for="sks">Umiejętność: </label><textarea id="sks" name="sks" rows="1" cols="150"></textarea><br><br><hr>
         <label for="opis">Opis: </label><textarea id="opis" name="opis" rows="1" cols="150"></textarea><br><br><hr>
         <?php
             echo '<label for="wystepowanie">Występowanie: </label><select id="wystepowanie" name="wystepowanie">';

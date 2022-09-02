@@ -32,3 +32,7 @@ button{
     border: 3px solid #ffbd59;
     border-radius: 5px;
 }
+tr, td{
+    border-bottom: 1px solid #ffbd59;
+    background-color: red;
+}
