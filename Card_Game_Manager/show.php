@@ -27,6 +27,7 @@ if (!isset($_SESSION["id_start"])){
             border-collapse: collapse;
             padding-left: 5px;
             padding-right: 5px;
+            background-color: #1e1e1e;
         }
         #small_one{
             width: 35px;
@@ -49,6 +50,7 @@ if (!isset($_SESSION["id_start"])){
             <th id="small_one">💲</th>
             <th id="small_one">♥️</th>
             <th id="small_one">💪</th>
+            <th>Typ</th>
             <th>Umiejętności</th>
         </tr>
 
@@ -62,13 +64,13 @@ if (!isset($_SESSION["id_start"])){
                 die("Connection failed");
             }
 
-            $sql = "SELECT id, Nazwa, Cena, HP, Atak, Skill_Spec FROM karty WHERE id > " . $id_start . " AND id <= " . $id_end;
+            $sql = "SELECT karty.id as ids, karty.Nazwa as Naz, typ.Nazwa as Nazwa_Typu, Cena, HP, Atak, Skill_Spec, typ.Nazwa FROM karty, typ WHERE karty.Typ=typ.id AND karty.id > " . $id_start . " AND karty.id <= " . $id_end;
             $result = $baza->query($sql);
             if ($result->num_rows > 0) {
                 while($row = $result->fetch_assoc()) {
                     echo "<tr>";
-                    echo "<td>" . $row["id"] . "</td>";
-                    echo "<td>" . $row["Nazwa"] . "</td>";
+                    echo "<td>" . $row["ids"] . "</td>";
+                    echo "<td>" . $row["Naz"] . "</td>";
                     if ($row["Cena"] == -1){
                         echo "<td>?</td>";
                     } else {
@@ -76,6 +78,7 @@ if (!isset($_SESSION["id_start"])){
                     }
                     echo "<td>" . $row["HP"] . "</td>";
                     echo "<td>" . $row["Atak"] . "</td>";
+                    echo "<td>" . $row["Nazwa_Typu"] . "</td>";
                     echo "<td>" . $row["Skill_Spec"] . "</td>";
                     echo "</td>";
                     echo "</tr>";
