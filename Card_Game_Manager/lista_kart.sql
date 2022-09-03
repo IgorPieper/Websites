@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 02 Wrz 2022, 23:04
+-- Czas generowania: 03 Wrz 2022, 23:01
 -- Wersja serwera: 10.4.22-MariaDB
 -- Wersja PHP: 8.1.2
 
@@ -20,6 +20,31 @@ SET time_zone = "+00:00";
 --
 -- Baza danych: `karty_ike`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `bohater`
+--
+
+CREATE TABLE `bohater` (
+  `id` int(11) NOT NULL,
+  `Nazwa` varchar(50) NOT NULL,
+  `HP` int(11) NOT NULL,
+  `Opis` text NOT NULL,
+  `Wystepowanie` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Zrzut danych tabeli `bohater`
+--
+
+INSERT INTO `bohater` (`id`, `Nazwa`, `HP`, `Opis`, `Wystepowanie`) VALUES
+(1, 'Kamień Kuba', 5, 'Oryginalnie był czerwony. I został unicestwiony przez Panie sprzątające', 'Roślinny Zamek'),
+(2, 'Bagienna Tiara', 5, 'Zaczarowane nakrycie głowy noszone przez samą wiedźmę', 'Moczary Wiedźmy'),
+(3, 'Paź Królowej', 5, 'Byłem pewny, że to ten czerwony motyl ', 'Owocowy Las'),
+(4, 'Boski Totem', 5, 'Ku czci wielkim Bogom', 'Sa-wanna z ciepłą wodą'),
+(5, 'Grzybi Król', 6, 'Top quality grafika. Moja ulubiona ze wszystkich', 'Kraina Grzybów');
 
 -- --------------------------------------------------------
 
@@ -45,7 +70,7 @@ CREATE TABLE `karty` (
 --
 
 INSERT INTO `karty` (`id`, `Nazwa`, `Cena`, `HP`, `Atak`, `Temperatura`, `Typ`, `Skill_Spec`, `Opis`, `Wystepowanie`) VALUES
-(1, 'Slime', 1, 1, 1, 1, 1, 'Brak', 'Uff ale lepki. Ciekawe co się stanie gdy wsadzę ...', 1),
+(1, 'Slime', 1, 1, 1, 1, 1, 'Brak', 'Uff ale lepki. Ciekawe co się stanie gdy wsadzę rękę ...', 1),
 (2, 'Dirt', 1, 2, 0, 1, 1, 'Brak', 'Bardzo lubi zbierać EXP', 1),
 (3, 'Mag Mak', 3, 1, 1, 1, 3, 'Brak', 'Z takim czarodziejem to trzeba uważać. Nie wiadomo kiedy się zrani.', 1),
 (4, 'Exp', 3, 1, 1, 1, 4, 'Brak', 'Potężne pyłki dające wielką moc', 1),
@@ -939,11 +964,18 @@ INSERT INTO `wystepowanie` (`id`, `Nazwa`, `Opis`) VALUES
 (7, 'Nadchodzi Noc część 1', 'Witamy w nocy. Prawie niecodzienna to rzecz'),
 (8, 'Nadchodzi Noc część 2', 'W nocy, kocy się nie moczy'),
 (9, 'Water Wars', 'A to mapka z okazji rocznicy innej naszej gry'),
-(10, 'Piaszczyste Pustkowie', 'Wracamy do czegoś bardziej okrojonego tematycznie');
+(10, 'Piaszczyste Pustkowie', 'Wracamy do czegoś bardziej okrojonego tematycznie'),
+(11, 'Portal, tutaj?', 'Z domieszką tajgi. I serio kto postawił tu portal i dokąd?');
 
 --
 -- Indeksy dla zrzutów tabel
 --
+
+--
+-- Indeksy dla tabeli `bohater`
+--
+ALTER TABLE `bohater`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indeksy dla tabeli `karty`
@@ -1011,6 +1043,12 @@ ALTER TABLE `wystepowanie`
 --
 
 --
+-- AUTO_INCREMENT dla tabeli `bohater`
+--
+ALTER TABLE `bohater`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
 -- AUTO_INCREMENT dla tabeli `karty`
 --
 ALTER TABLE `karty`
@@ -1062,7 +1100,7 @@ ALTER TABLE `typ`
 -- AUTO_INCREMENT dla tabeli `wystepowanie`
 --
 ALTER TABLE `wystepowanie`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- Ograniczenia dla zrzutów tabel
