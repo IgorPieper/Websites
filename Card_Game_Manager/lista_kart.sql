@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 03 Wrz 2022, 23:01
+-- Czas generowania: 03 Wrz 2022, 23:46
 -- Wersja serwera: 10.4.22-MariaDB
 -- Wersja PHP: 8.1.2
 
@@ -44,7 +44,12 @@ INSERT INTO `bohater` (`id`, `Nazwa`, `HP`, `Opis`, `Wystepowanie`) VALUES
 (2, 'Bagienna Tiara', 5, 'Zaczarowane nakrycie głowy noszone przez samą wiedźmę', 'Moczary Wiedźmy'),
 (3, 'Paź Królowej', 5, 'Byłem pewny, że to ten czerwony motyl ', 'Owocowy Las'),
 (4, 'Boski Totem', 5, 'Ku czci wielkim Bogom', 'Sa-wanna z ciepłą wodą'),
-(5, 'Grzybi Król', 6, 'Top quality grafika. Moja ulubiona ze wszystkich', 'Kraina Grzybów');
+(5, 'Grzybi Król', 6, 'Top quality grafika. Moja ulubiona ze wszystkich', 'Kraina Grzybów'),
+(6, 'Czerwony Wdowiec', 6, 'Bardzo niebezpieczny pająk, omijać kątem 270 stopni', 'Nadchodzi Noc część 1'),
+(7, 'Róża Nocy', 6, 'Jej płatki są jak gwieździsta noc', 'Nadchodzi Noc część 2'),
+(8, 'Król Krabów', 6, 'Żądło jak u skorpiona to jego znak rozpoznawczy. Nosi też ze sobą klucz. Nie pytaj do czego', 'Water Wars'),
+(9, 'Piaskoryb', 20, 'Olbrzymi latający wieloryb, uwielbia grasować nad wyschniętymi oceanami', 'Piaszczyste Pustkowie'),
+(10, 'Zapomniany', 20, 'Zapomniałem dodać opis', 'Portal, tutaj?');
 
 -- --------------------------------------------------------
 
@@ -281,7 +286,27 @@ INSERT INTO `karty` (`id`, `Nazwa`, `Cena`, `HP`, `Atak`, `Temperatura`, `Typ`, 
 (209, 'Kostka Horadrimów', 2, 0, 0, 1, 4, 'Połącz 2 karty', 'Znaleziona w losowej jaskini', 10),
 (210, 'Ciernina', 4, 3, 1, 1, 1, 'Ciernie', 'Darmowe przytulasy', 10),
 (211, 'Piaskowy Rekin', 7, 3, 4, 1, 1, 'Odporny na podpalenie', 'Skrywa się w mroku i czeka na najlepszy moment', 10),
-(212, 'Piaskowy Dziad', 5, 2, 2, 1, 1, 'Wyłącz jedną pogodę', 'Wchodź piaskowy dziadzie!', 10);
+(212, 'Piaskowy Dziad', 5, 2, 2, 1, 1, 'Wyłącz jedną pogodę', 'Wchodź piaskowy dziadzie!', 10),
+(213, 'Ostatnia Kropla', 0, 1, 1, 3, 1, 'Po śmierci wrogi kat leczy się za 1', 'Szybko zanim wyparuje. Ona tylko pobudzi twoje prawdziwe pragnienie', 10),
+(214, 'Figa z Makiem', 1, 0, 0, 1, 4, 'Wtasuj ją w talię przeciwnika.', 'Poczuj jego rozpacz gdy zamiast gamechangera właśnie ją wylosuje', 11),
+(215, 'Moocha', 6, 1, 0, 1, 1, 'Co turę wylecz jedną jednostkę ze wszystkich złych efektów', 'Tylko złap to wymię w locie', 11),
+(216, 'Piorun', 6, 0, 0, 1, 4, 'Zadaj 3 obrażenia, podpal', 'Legendarna karta z jednej z poprzednich edycji wraca do żywych!', 11),
+(217, 'Jasnoskóra Winogrona', 5, 4, 1, 1, 2, 'Brak', 'Bezpestkowe są bez duszy', 11),
+(218, 'Burza Mózgów', 5, 0, 0, 1, 4, 'Zadaj 2 obrażenia, dobierz 2 karty', 'Nie zbliżaj się do innych. Oni chcą cię porazić swoją ideą', 11),
+(219, 'Spalona Woda', 5, 0, 0, 3, 4, 'Podpal wszystkie jednostki znajdujące się na wodzie', 'Tylko legendy są do tego zdolne', 11),
+(220, 'Zamrożony Ogień', 5, 0, 0, 2, 4, 'Podpal i zamroź jednostkę', 'W zamrożonym sercu nie ma miejsca na szczęście', 11),
+(221, 'Mleczko Kokosowe', 3, 0, 0, 1, 4, 'Wylecz jednostkę ze wszystkich złych efektów', 'To dzięki tej słomce, żaden żółw nie ucierpiał', 11),
+(222, 'Upośledź', 5, 2, 2, 1, 1, 'Atakuje na skos 2 jednostki', 'On nie udaje. On naprawdę nauczył się strzelać dwa razy szybciej', 11),
+(223, 'Pajęczyna', 3, 0, 0, 1, 4, 'Spowolnij jednostkę', 'Pajęczyna w kształcie pająka, dlaczego nie?', 11),
+(224, 'Kula Cienia', 3, 0, 0, 1, 4, 'Jednostka zaczyna atakować od tylnych linii', 'Kolejna z mistycznych kuli', 11),
+(225, 'Bies Podziemi', 5, 2, 2, 1, 1, 'Jego atak spowalnia', 'W imię plagi', 11),
+(226, 'Bałwan', 4, 2, 1, 2, 1, 'Gdy pole przed nim jest wolne to zaatakuj dowolną jednostkę. Zaatakowana przechodzi na jego pole.', 'Kto odważy się zdjąć jego dynię? Mocno ogranicza mu pole widzenia', 11),
+(227, 'Topola Lodowa', 10, 3, 3, 2, 3, 'Jej atak spowalnia', 'To Pola. A na nim Topole. Topole Lodowe', 11),
+(228, 'Party Cherry', 2, 0, 0, 1, 4, 'Ulecz spowolnienie', 'Tak tańczyła, że aż siostrę zgubiła w tym tłumie ślamazarów', 11),
+(229, 'Marchwianin', 5, 2, 3, 2, 1, 'Odporny na przeniesienie', 'Rozbicie na środku lodowych pustkowi było doprawdy niefortunne.', 11),
+(230, 'Kura Lodowa', 5, 4, 2, 2, 1, 'Brak', 'To kura lodowa. Chować statki!', 11),
+(231, 'Meszek Peszek', 4, 3, 0, 1, 1, 'Bierze na siebie wszystkie sztuczki', 'W rozbitym zwierciadle wygląda całkiem niemrawo', 11),
+(232, 'Lody', 2, 0, 0, 2, 4, 'Ulecz jednostkę za ile tylko chcesz, ale każdy punkt życia = tura zamrożenia', 'Bez Laktozy. Czysta Fruktoza', 11);
 
 -- --------------------------------------------------------
 
@@ -570,7 +595,32 @@ INSERT INTO `karty_rodzaj` (`id`, `karty_id`, `rodzaj_id`) VALUES
 (268, 210, 3),
 (269, 211, 6),
 (270, 211, 11),
-(271, 212, 8);
+(271, 212, 8),
+(272, 213, 4),
+(273, 214, 10),
+(274, 215, 5),
+(275, 215, 11),
+(276, 216, 4),
+(277, 217, 9),
+(278, 218, 4),
+(279, 218, 12),
+(280, 219, 4),
+(281, 220, 4),
+(282, 221, 10),
+(283, 222, 6),
+(284, 223, 5),
+(285, 224, 4),
+(286, 225, 5),
+(287, 226, 2),
+(288, 226, 3),
+(289, 227, 3),
+(290, 227, 4),
+(291, 228, 3),
+(292, 229, 3),
+(293, 230, 11),
+(294, 231, 3),
+(295, 232, 2),
+(296, 232, 10);
 
 -- --------------------------------------------------------
 
@@ -814,7 +864,27 @@ INSERT INTO `karty_tryb` (`id`, `karty_id`, `tryb_id`) VALUES
 (223, 209, 4),
 (224, 210, 1),
 (225, 211, 1),
-(226, 212, 2);
+(226, 212, 2),
+(227, 213, 1),
+(228, 214, 4),
+(229, 215, 1),
+(230, 216, 4),
+(231, 217, 1),
+(232, 218, 4),
+(233, 219, 4),
+(234, 220, 4),
+(235, 221, 4),
+(236, 222, 3),
+(237, 223, 4),
+(238, 224, 4),
+(239, 225, 1),
+(240, 226, 1),
+(241, 227, 1),
+(242, 228, 4),
+(243, 229, 1),
+(244, 230, 3),
+(245, 231, 1),
+(246, 232, 4);
 
 -- --------------------------------------------------------
 
@@ -1046,25 +1116,25 @@ ALTER TABLE `wystepowanie`
 -- AUTO_INCREMENT dla tabeli `bohater`
 --
 ALTER TABLE `bohater`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT dla tabeli `karty`
 --
 ALTER TABLE `karty`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=213;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=233;
 
 --
 -- AUTO_INCREMENT dla tabeli `karty_rodzaj`
 --
 ALTER TABLE `karty_rodzaj`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=272;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=297;
 
 --
 -- AUTO_INCREMENT dla tabeli `karty_tryb`
 --
 ALTER TABLE `karty_tryb`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=227;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=247;
 
 --
 -- AUTO_INCREMENT dla tabeli `rodzaj`
