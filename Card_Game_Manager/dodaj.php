@@ -6,6 +6,7 @@ $hp = $_POST["hp"];
 $atak = $_POST["atak"];
 $temp = $_POST["temp"];
 $typ = $_POST["typ"];
+
 if (empty($_POST["sks"])){
     $skill_spec = "Brak";
 } else{

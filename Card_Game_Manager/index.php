@@ -7,7 +7,7 @@
     <meta name="keywords" content="karty">        <!-- Słowa kluczowe -->
     <meta name="author" content="Igor Pieper">  <!-- Informacja o autorze -->
 
-    <title>IKE Karty</title>
+    <title>Stwórz Karty</title>
 
     <link rel="stylesheet" href="main.css">
 </head>
@@ -21,10 +21,18 @@
             die("Connection failed");
         }
     ?>
+    <div style="float: left; padding-right: 20px">
+        <form action="show.php">
+            <button>Pokaż Karty</button>
+        </form>
+    </div>
 
-    <form action="show.php">
-        <button>Pokaż Karty</button><hr>
-    </form>
+    <div>
+        <form action="dodaj_bohatera.php">
+            <button>Dodaj Bohatera</button>
+        </form>
+    </div><hr>
+
     <form method="POST" action="dodaj.php">
         <label for="nazwa">Nazwa: </label><input type="text" id="nazwa" name="nazwa"><br><br><hr>
         <label for="cena">Cena: </label><input type="number" id="cena" name="cena" value="1"><br><br><hr>

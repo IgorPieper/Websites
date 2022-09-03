@@ -4,6 +4,10 @@ session_start();
 
 $_SESSION["id_start"] += 25;
 
-header('Location: show.php');
+if (!isset($_SESSION["loc"])){
+    $_SESSION["loc"] = "show.php";
+}
+
+header('Location: ' . $_SESSION["loc"]);
 
 ?>

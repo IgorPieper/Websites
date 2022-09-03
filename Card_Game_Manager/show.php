@@ -6,6 +6,11 @@ if (!isset($_SESSION["id_start"])){
     $_SESSION["id_start"] = 0;
 }
 
+if (!isset($_SESSION["loc"])){
+    $_SESSION["loc"] = "show.php";
+}
+$_SESSION["loc"] = "show.php";
+
 ?>
 
 <!doctype html>
@@ -17,7 +22,7 @@ if (!isset($_SESSION["id_start"])){
     <meta name="keywords" content="karty">        <!-- Słowa kluczowe -->
     <meta name="author" content="Igor Pieper">  <!-- Informacja o autorze -->
 
-    <title>IKE Karty</title>
+    <title>Lista Kart</title>
 
     <link rel="stylesheet" href="main.css">
 
@@ -39,9 +44,23 @@ if (!isset($_SESSION["id_start"])){
 
 <body>
 
-    <form action="index.php">
-        <button>Dodaj karte</button><br><br>
-    </form>
+    <div style="float: left; padding-right: 20px">
+        <form action="index.php">
+            <button>Dodaj karte</button><br><br>
+        </form>
+    </div>
+
+    <div style="float: left; padding-right: 20px">
+        <form action="details.php">
+            <button>Szczegóły</button><br><br>
+        </form>
+    </div>
+
+    <div>
+        <form action="show_heroes.php">
+            <button>Bohaterowie</button><br><br>
+        </form>
+    </div>
 
     <table>
         <tr>
@@ -80,7 +99,6 @@ if (!isset($_SESSION["id_start"])){
                     echo "<td>" . $row["Atak"] . "</td>";
                     echo "<td>" . $row["Nazwa_Typu"] . "</td>";
                     echo "<td>" . $row["Skill_Spec"] . "</td>";
-                    echo "</td>";
                     echo "</tr>";
                 }
             }
