@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 03 Wrz 2022, 23:46
+-- Czas generowania: 25 Wrz 2022, 22:14
 -- Wersja serwera: 10.4.22-MariaDB
 -- Wersja PHP: 8.1.2
 
@@ -49,7 +49,8 @@ INSERT INTO `bohater` (`id`, `Nazwa`, `HP`, `Opis`, `Wystepowanie`) VALUES
 (7, 'Róża Nocy', 6, 'Jej płatki są jak gwieździsta noc', 'Nadchodzi Noc część 2'),
 (8, 'Król Krabów', 6, 'Żądło jak u skorpiona to jego znak rozpoznawczy. Nosi też ze sobą klucz. Nie pytaj do czego', 'Water Wars'),
 (9, 'Piaskoryb', 20, 'Olbrzymi latający wieloryb, uwielbia grasować nad wyschniętymi oceanami', 'Piaszczyste Pustkowie'),
-(10, 'Zapomniany', 20, 'Zapomniałem dodać opis', 'Portal, tutaj?');
+(10, 'Zapomniany', 20, 'Zapomniałem dodać opis', 'Portal, tutaj?'),
+(11, 'Sam Sam', 20, 'Bardzo Sam-otny Sam', 'Party Time!!!');
 
 -- --------------------------------------------------------
 
@@ -306,7 +307,27 @@ INSERT INTO `karty` (`id`, `Nazwa`, `Cena`, `HP`, `Atak`, `Temperatura`, `Typ`, 
 (229, 'Marchwianin', 5, 2, 3, 2, 1, 'Odporny na przeniesienie', 'Rozbicie na środku lodowych pustkowi było doprawdy niefortunne.', 11),
 (230, 'Kura Lodowa', 5, 4, 2, 2, 1, 'Brak', 'To kura lodowa. Chować statki!', 11),
 (231, 'Meszek Peszek', 4, 3, 0, 1, 1, 'Bierze na siebie wszystkie sztuczki', 'W rozbitym zwierciadle wygląda całkiem niemrawo', 11),
-(232, 'Lody', 2, 0, 0, 2, 4, 'Ulecz jednostkę za ile tylko chcesz, ale każdy punkt życia = tura zamrożenia', 'Bez Laktozy. Czysta Fruktoza', 11);
+(232, 'Lody', 2, 0, 0, 2, 4, 'Ulecz jednostkę za ile tylko chcesz, ale każdy punkt życia = tura zamrożenia', 'Bez Laktozy. Czysta Fruktoza', 11),
+(233, 'Ś-ciema', 0, 0, 0, 1, 5, 'Może zostać położony w dowolnym miejscu. Działa jako straszak. Sam nie robi nic', 'To ściema, tak duże ćmy nie istnieją', 12),
+(234, 'Kaw-ior', 4, 0, 0, 1, 4, 'Budzi wszystkie twoje jednostki znajdujące się na wodzie', 'Rybki w tych czasach mają naprawdę dziwaczną dietę', 12),
+(235, 'Kula Jadu', 3, 0, 0, 1, 4, 'Wszystkie zatrute jednostki (twoje i wrogie) dostają +1 życia i +1 ataku', 'Lata w około twojej broni jak wścibska mucha. Jej dotknięcie grozi zakażeniem', 12),
+(236, 'Jajcarz', 5, 2, 2, 1, 1, 'Gdy twój bohater zostanie zaatakowany, to Jajcarz zaatakuje. Nawet pomimo tego że nie jest to jego tura', 'Miał kiedyś brata bliźniaka. Byli największą partią w okolicy', 12),
+(237, 'Zemsta Jajcarza', 3, 1, 1, 1, 1, 'Gdy dowolna jednostka sojusznicza zostanie zaatakowana to atakuje. Nie patrząc na kolejność (Nie działa sam na siebie)', 'Jego życie skończyło się przedwcześnie. Jest gotów wymierzyć sprawiedliwość według własnego umiaru', 12),
+(238, 'Wiatr na Smyczy', 3, 0, 0, 1, 4, 'Wymień wszystkie karty na ręce na inne', 'Długi jak wąż. Nieuchwytny jak wąż. Kocha węże', 12),
+(239, 'Nieznany Pierwiastek', 3, 0, 0, 1, 4, 'Karta zadaje i otrzymuje od teraz podwójne obrażenia', 'Numer 696, nazwa skrótowa Sik, masa atomowa nieskończoność,(69), pełna nazwa Bagno', 12),
+(240, '2 Wężowe Prawo', 3, 0, 0, 1, 4, 'Zamień życie jednostki z jej atakiem, a atak z życiem', 'Priorytet to idealne zgranie', 12),
+(241, 'Wie Heißt Er', 6, 4, 0, 1, 1, 'Ściąga na siebie wszystkie sztuczki', 'Weźmie wszystko. Gustuje we wzmocnieniach', 12),
+(242, 'Podłoga to Lava', 4, 0, 0, 3, 7, 'Podłoże zmienia się w płynną lawę. Karty, które nie są z rodziny ciepłych będą traciły na nim 1 życie co turę', 'KLIF TO LAVA ...', 12),
+(243, 'Śmieszek Czas', 0, 0, 0, 1, 4, '+1 surowca u ciebie i u oponenta na stałe co turę', 'Gdy zakpi z ciebie czas, to pamiętaj, że zawsze może to zrobić kolejny raz', 12),
+(244, 'Mocznik', 4, 0, 0, 1, 7, 'Stwórz wodną linię', 'Czy tobie również wydaje się, że ta woda jest jakoś tak dziwnie ciepła?', 12),
+(245, 'Galaktyczna Gąbka', 3, 0, 0, 1, 7, 'Wyczyść linię z karty środowiskowej. W jej miejsce pojawi się zwykłe pole (Nie dotyczy pory dnia)', 'Leży w środku każdej galaktyki. Nikt nie wie czy to roślina, czy zwierze', 12),
+(246, 'Dżumbalaki', 7, 3, 3, 1, 1, 'Są trzej. Nie ważne jak wiele obrażeń dostaną w jednym ataku to i tak dostaną tylko jeden. Za stracone życie tracą też atak', 'Ed, Edd i Eddie. To ich ulubiona kreskówka. Nie mylić z trzema świnkami', 12),
+(247, 'Słom(k)a', 0, 0, 0, 1, 4, 'Zadaj jedno obrażenie, dodaj jeden do ataku', 'Niech taktyka będzie z tobą', 12),
+(248, 'Słonkonecznik', 4, 0, 0, 1, 7, 'Na tej linii nastaje dzień', 'Roztapia patrzące na niego lunety. Takie tworzą wieczny pancerz na twoim oku', 12),
+(249, 'Księżnicznik', 4, 0, 0, 1, 7, 'Na tej linii nastaje noc', 'Ma silne przyciąganie kłopotów', 12),
+(250, 'Voodoo Hazard', 3, 0, 0, 1, 4, 'Zadaj dowolną ilość obrażeń swojemu bohaterowi. Za każdy jeden punkt dostaniesz jedną kartę', 'To zdecydowanie podchodzi pod masochizm. Gwarantuje głębokie doznanie', 12),
+(251, 'Wesolutki Slime', 2, 1, 1, 1, 1, 'Gdy jego życie wzrośnie o 2 to dostaniesz 1 surowiec', 'Lubi wchodzić w symbiozę z innymi przedstawicielami gatunku', 12),
+(252, 'Szlamowy Rdzeń', 2, 0, 0, 1, 4, '+1 życia', 'Wydalany z organizmu wraz z pożywieniem', 12);
 
 -- --------------------------------------------------------
 
@@ -620,7 +641,36 @@ INSERT INTO `karty_rodzaj` (`id`, `karty_id`, `rodzaj_id`) VALUES
 (293, 230, 11),
 (294, 231, 3),
 (295, 232, 2),
-(296, 232, 10);
+(296, 232, 10),
+(297, 233, 5),
+(298, 234, 6),
+(299, 234, 9),
+(300, 235, 4),
+(301, 235, 10),
+(302, 236, 10),
+(303, 237, 13),
+(304, 238, 4),
+(305, 239, 4),
+(306, 240, 4),
+(307, 240, 11),
+(308, 241, 10),
+(309, 242, 4),
+(310, 243, 4),
+(311, 244, 3),
+(312, 245, 4),
+(313, 245, 10),
+(314, 246, 5),
+(315, 246, 12),
+(316, 247, 3),
+(317, 247, 10),
+(318, 248, 3),
+(319, 248, 4),
+(320, 249, 3),
+(321, 249, 8),
+(322, 250, 1),
+(323, 250, 4),
+(324, 251, 1),
+(325, 252, 1);
 
 -- --------------------------------------------------------
 
@@ -884,7 +934,29 @@ INSERT INTO `karty_tryb` (`id`, `karty_id`, `tryb_id`) VALUES
 (243, 229, 1),
 (244, 230, 3),
 (245, 231, 1),
-(246, 232, 4);
+(246, 232, 4),
+(247, 233, 4),
+(248, 234, 2),
+(249, 234, 3),
+(250, 235, 4),
+(251, 236, 1),
+(252, 237, 1),
+(253, 238, 4),
+(254, 239, 4),
+(255, 240, 4),
+(256, 241, 1),
+(257, 242, 4),
+(258, 243, 4),
+(259, 244, 1),
+(260, 244, 2),
+(261, 245, 4),
+(262, 246, 1),
+(263, 247, 4),
+(264, 248, 2),
+(265, 249, 1),
+(266, 250, 4),
+(267, 251, 1),
+(268, 252, 4);
 
 -- --------------------------------------------------------
 
@@ -1035,7 +1107,8 @@ INSERT INTO `wystepowanie` (`id`, `Nazwa`, `Opis`) VALUES
 (8, 'Nadchodzi Noc część 2', 'W nocy, kocy się nie moczy'),
 (9, 'Water Wars', 'A to mapka z okazji rocznicy innej naszej gry'),
 (10, 'Piaszczyste Pustkowie', 'Wracamy do czegoś bardziej okrojonego tematycznie'),
-(11, 'Portal, tutaj?', 'Z domieszką tajgi. I serio kto postawił tu portal i dokąd?');
+(11, 'Portal, tutaj?', 'Z domieszką tajgi. I serio kto postawił tu portal i dokąd?'),
+(12, 'Party Time!!!', 'Nie ma co się rozwodzić. Jest za głośno by tłumaczyć.');
 
 --
 -- Indeksy dla zrzutów tabel
@@ -1116,25 +1189,25 @@ ALTER TABLE `wystepowanie`
 -- AUTO_INCREMENT dla tabeli `bohater`
 --
 ALTER TABLE `bohater`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT dla tabeli `karty`
 --
 ALTER TABLE `karty`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=233;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=253;
 
 --
 -- AUTO_INCREMENT dla tabeli `karty_rodzaj`
 --
 ALTER TABLE `karty_rodzaj`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=297;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=326;
 
 --
 -- AUTO_INCREMENT dla tabeli `karty_tryb`
 --
 ALTER TABLE `karty_tryb`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=247;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=269;
 
 --
 -- AUTO_INCREMENT dla tabeli `rodzaj`
@@ -1170,7 +1243,7 @@ ALTER TABLE `typ`
 -- AUTO_INCREMENT dla tabeli `wystepowanie`
 --
 ALTER TABLE `wystepowanie`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- Ograniczenia dla zrzutów tabel
