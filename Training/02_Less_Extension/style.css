@@ -1,0 +1,111 @@
+/* Kolory */
+/* Kompilacja */
+/* lessc style.less style.css */
+/* Pamiętaj o dobrej ścieżce do pliku */
+* {
+  box-sizing: border-box;
+}
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+html {
+  font-family: "Lucida Sans", sans-serif;
+}
+.header {
+  background-color: #ff48d2;
+  color: #ffffff;
+  padding: 15px;
+}
+.bar {
+  background-image: url("bg_nav.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-right: 3px solid black;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  color: white;
+  text-align: center;
+}
+.bar:hover {
+  background-image: url("bg_nav_h.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+.menu {
+  background-color: #ffaeeb;
+  height: 400px;
+}
+a {
+  color: black;
+}
+/* Użycie lighten */
+.srodek {
+  background-color: #ffe1f8;
+  height: 400px;
+}
+ul {
+  list-style-image: url('bullet.png');
+}
+/* Użycie darken */
+.footer {
+  background-color: #ff48d2;
+  color: #ffffff;
+  text-align: center;
+  font-size: 12px;
+  padding: 15px;
+}
+.col-1 {
+  width: 8.33%;
+}
+.col-2 {
+  width: 16.66%;
+}
+.col-3 {
+  width: 25%;
+}
+.col-4 {
+  width: 33.33%;
+}
+.col-5 {
+  width: 41.66%;
+}
+.col-6 {
+  width: 50%;
+}
+.col-7 {
+  width: 58.33%;
+}
+.col-8 {
+  width: 66.66%;
+}
+.col-9 {
+  width: 75%;
+}
+.col-10 {
+  width: 83.33%;
+}
+.col-11 {
+  width: 91.66%;
+}
+.col-12 {
+  width: 100%;
+}
+@media only screen and (max-width: 890px) {
+  [class*="col-"] {
+    width: 100%;
+  }
+  .menu {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  [class*="col-"] {
+    width: 100%;
+  }
+}
