@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+
+<body>
+
+    <script>
+
+        function Pyramid(X) {
+            let s = "* "
+            for (let i = 1; i <= X; ++i) {
+                for (let j = 1; j < i; ++j) {
+                    s += "* ";
+                }
+                console.log(s + "\n");
+                s = "* ";
+            }
+
+        }
+        Pyramid(10);
+
+    </script>
+
+</body>
+
+</html>
