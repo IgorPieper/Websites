@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+
+<body>
+
+    <p>Before the script...</p>
+
+    <script>
+
+        function Pythagorean_Triangle(tops) {
+
+            let C = Math.max(tops[0], tops[1], tops[2]);
+            let index = tops.indexOf(C);
+            tops.splice(index, 1);
+
+            let A_Kwadrat = tops[0] * tops[0];
+            let B_Kwadrat = tops[1] * tops[1];
+            let C_Kwadrat = C * C;
+
+            if (A_Kwadrat + B_Kwadrat == C_Kwadrat) {
+                alert("The triangle is a Pythagorean Triangle");
+            } else {
+                alert("The triangle is not a Pythagorean Triangle");
+            }
+        }
+
+        Pythagorean_Triangle([3, 4, 5]);
+        
+    </script>
+
+</body>
+
+</html>
+
+
