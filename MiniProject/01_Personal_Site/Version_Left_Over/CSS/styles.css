@@ -1,0 +1,21 @@
+body{
+    background-color: #1e1e1e;
+    color: #ffbd59;
+}
+a:link, a:visited{
+    color: #ffbd59;
+}
+input, textarea{
+    background-color: #1e1e1e;
+    border: 1px solid #ffbd59;
+    color: #ffbd59;
+}
+#nice{
+    width: 200px; height: 200px
+}
+#header{
+    text-align: center
+}
+.animal_img{
+    width: 50px; height: 50px
+}

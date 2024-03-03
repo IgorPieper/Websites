@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Igor's Personal Site</title>
+
+    <style>
+        body{
+            background-color: #1e1e1e;
+            color: #ffbd59;
+        }
+        #mainpage{
+            height: 630px;
+        }
+        a:link, a:visited{
+            color: #ffbd59;
+        }
+        input, textarea{
+            background-color: #1e1e1e;
+            border: 1px solid #ffbd59;
+            color: #ffbd59;
+        }
+        .left{
+            position: absolute;
+            float: left;
+        }
+        #flap{
+            width: 500px;
+            height: 500px;
+            padding: 100px 700px;
+        }
+        #right{
+            position: absolute;
+            padding-top: 200px;
+            padding-left: 800px;
+            font-size: 35px;
+            text-align: center;
+            color: #1e1e1e;
+            font-family: Arial;
+        }
+        #human{
+            font-size: 20px;
+            font-family: Arial;
+        }
+        #nice{
+            width: 200px;
+            height: 200px;
+            padding-top: 100px;
+            padding-left: 840px;
+        }
+        .animal_img{
+            width: 50px; height: 50px
+        }
+    </style>
+</head>
+
+<body>
+
+<div id="mainpage">
+    <div class="left"><img src="Graphics/flap.png" id="flap"></div>
+
+    <div id="right">
+        <h1>I'm Igor</h1>
+        <p id="human">a human (probably)</p>
+    </div>
+</div>
+
+<div class="left"><img src="Graphics/nice.png" id="nice" alt="Nice to meet You!"></div>
+
+
+
+<h3>Education</h3>
+<ul>
+    <li>Pōrando Nihon jōhō kōka daigaku in Gdańsk</li>
+    <li>Complex of technical and IT schools in Lębork</li>
+    <li>Middle school number 1 in Lębork</li>
+    <li>Elementary school number 8 in Lębork</li>
+</ul>
+
+<h3>Contact</h3>
+<ul>
+    <li><a href="https://www.facebook.com/igor.pieper">Facebook</a></li>
+    <li><a href="https://github.com/IgorPieper">Github</a></li>
+    <li><a href="https://www.linkedin.com/in/igor-pieper-22176b231/">Linkedin</a></li>
+</ul><hr />
+
+<table>
+    <tr>
+        <th>Zwierze</th>
+        <th>| Ranking Słodkości</th>
+    </tr>
+    <tr>
+        <td><img src="Graphics/pug.png" class="animal_img" alt="Pug"></td>
+        <td>| 💛💛💛💛💛</td>
+    </tr>
+    <tr>
+        <td><img src="Graphics/cat.png" class="animal_img" alt="Cat"></td>
+        <td>| 💛💛💛</td>
+    </tr>
+    <tr>
+        <td><img src="Graphics/earthworm.png" class="animal_img" alt="Earthworm"></td>
+        <td>| 💛</td>
+    </tr>
+</table><hr />
+
+<form method="post" action="mailto:mail@mail.mail" enctype="text/plain">
+    <label>Your Name: </label><input type="text" name="yourName"><br><br>
+    <label>Your Email: </label><input type="email" name="yourEmail"><br><br>
+    <label>Your Message: </label><br><textarea name="yourname"></textarea><br><br>
+    <input type="submit" value="Send">
+</form>
+
+</body>
+
+</html>
